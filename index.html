@@ -40,6 +40,20 @@
         #foodList li:hover {
             @apply -translate-y-1.5 shadow-xl shadow-slate-900/10;
         }
+
+        /* Dark Theme Support */
+        :root[data-theme="dark"] body {
+            @apply bg-none bg-slate-950;
+        }
+        :root[data-theme="dark"] main {
+            @apply bg-slate-900/80 border border-slate-800 text-slate-100;
+        }
+        :root[data-theme="dark"] .ring-bg {
+            stroke: #1e293b;
+        }
+        :root[data-theme="dark"] input {
+            @apply bg-slate-800 border-slate-700 text-white;
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-rose-50 via-white to-sky-50 min-h-screen flex items-center justify-center p-6 transition-colors duration-500">
