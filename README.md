@@ -37,12 +37,12 @@ This project implements a lightweight calorie-tracking web app that lets users a
 ---
 
 ## Screenshot
-`screenshot/calorie-counter.png` (screenshot)
+![App Screenshot](./screenshot/calorie-counter.png)
 
 ---
 
 ## Live Link
-`https://kxrma35.github.io/Calorie-Counter/` (replace with your deployed URL)
+`https://kxrma35.github.io/Calorie-Counter/`
 
 ---
 
@@ -54,7 +54,7 @@ This project implements a lightweight calorie-tracking web app that lets users a
 
 2. Open the project folder.
 
-3. Open `index.html` in any moder web browser.
+3. Open `index.html` in any modern web browser.
 
 ## Known Bugs
 - There are currently no known bugs.
