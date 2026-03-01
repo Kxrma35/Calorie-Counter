@@ -239,3 +239,6 @@ themeToggle.addEventListener('click', () => {
   }
 });
 
+// Initialization
+renderList();
+updateTotal();
