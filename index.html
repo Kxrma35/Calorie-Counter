@@ -22,6 +22,24 @@
             transform: rotate(-90deg);
             transition: stroke-dasharray 0.5s ease;
         }
+       
+        /* Animations */
+        @keyframes pulseTotal {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.06); }
+            100% { transform: scale(1); }
+        }
+        .total-pulse {
+            animation: pulseTotal 420ms ease;
+        }
+
+        /* List Item Hover Effects */
+        #foodList li {
+            @apply transition-all duration-200 ease-in-out;
+        }
+        #foodList li:hover {
+            @apply -translate-y-1.5 shadow-xl shadow-slate-900/10;
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-rose-50 via-white to-sky-50 min-h-screen flex items-center justify-center p-6 transition-colors duration-500">
