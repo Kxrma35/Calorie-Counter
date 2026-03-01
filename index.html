@@ -3,10 +3,26 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Calorie Counter — Daily Tracker</title>
+    <title>Calorie Counter</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
-   
+   <style type="text/tailwindcss">
+        /* Custom Ring Style */
+        .ring-bg {
+            fill: none;
+            stroke: #eef2ff;
+            stroke-width: 2.8;
+        }
+        .ring-fg {
+            fill: none;
+            stroke: #fb7185;
+            stroke-width: 2.8;
+            stroke-linecap: round;
+            transform-origin: center;
+            transform: rotate(-90deg);
+            transition: stroke-dasharray 0.5s ease;
+        }
+    </style>
 </head>
 <body class="bg-gradient-to-br from-rose-50 via-white to-sky-50 min-h-screen flex items-center justify-center p-6 transition-colors duration-500">
     
