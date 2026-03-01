@@ -1,4 +1,5 @@
 
+
 // Constants and DOM references
 const STORAGE_KEY = 'calorieItems_v1';
 const COOKIE_KEY = 'calorieItemsBackup';
@@ -15,7 +16,7 @@ const progressPath = document.getElementById('ringProgress');
 const themeToggle = document.getElementById('themeToggle');
 
 let items = loadItems();
-let dailyGoal = 2000; //  default goal
+let dailyGoal = 2000; // default goal
 
 
 // Utility helpers
@@ -43,4 +44,24 @@ function escapeHtml(s) {
     .replaceAll("'", '&#039;');
 }
 
+
+// Persistence
+function saveItems(list) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+  try {
+    setCookie(COOKIE_KEY, JSON.stringify(list.slice(-10)), 7);
+  } catch (e) {}
+  lastSavedEl.textContent = `Saved ${formatTime(Date.now())}`;
+}
+function loadItems() {
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if (raw) {
+    try { return JSON.parse(raw); } catch (e) {}
+  }
+  const cookie = readCookie(COOKIE_KEY);
+  if (cookie) {
+    try { return JSON.parse(cookie); } catch (e) {}
+  }
+  return [];
+}
 
